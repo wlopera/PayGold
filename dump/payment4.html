@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Pago Redsys Dinámico</title>
+</head>
+
+<body>
+    <h1>Pagar con Redsys</h1>
+    <button id="payBtn">Generar pago</button>
+    <div id="formContainer"></div>
+
+    <script>
+        document.getElementById('payBtn').addEventListener('click', async () => {
+            // Llamamos a la API Node.js para obtener los datos
+            const response = await fetch('http://localhost:3000/payment');
+            const data = await response.json();
+
+            // Creamos el formulario dinámicamente
+            const formHtml = `
+        <form action="${data.url}" method="POST" accept-charset="UTF-8">
+          <input type="hidden" name="Ds_SignatureVersion" value="${data.signatureVersion}" />
+          <input type="hidden" name="Ds_MerchantParameters" value="${data.merchantParameters}" />
+          <input type="hidden" name="Ds_Signature" value="${data.signature}" />
+          <input type="submit" value="Pagar ahora" />
+        </form>
+      `;
+
+            document.getElementById('formContainer').innerHTML = formHtml;
+        });
+    </script>
+</body>
+
+</html>

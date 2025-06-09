@@ -1,0 +1,27 @@
+06/09/2025 17:07:36: INFO : 
+-------------------------------------------------------------------
+
+
+06/09/2025 17:07:36: INFO : 
+🟢 Servidor iniciado en http://localhost:3000
+
+06/09/2025 17:07:36: INFO : 
+🌐 LocalTunnel disponible en: https://mipruebalocal.loca.lt
+
+06/09/2025 17:07:40: INFO : 
+{
+  "EVENT": "Valores de configuración enviados a Redsys",
+  "ORDER": "749506860530",
+  "AMOUNT": "3000",
+  "MERCHANT_CODE": "139052351",
+  "CURRENCY": "978",
+  "TRANSACTION_TYPE": "0",
+  "TERMINAL": "100",
+  "MERCHANT_URL": "https://www.hostalnana.com/",
+  "URL_OK": "https://www.hostalnana.com/",
+  "URL_KO": "https://www.hostalnana.com/",
+  "REDSYS_ENDPOINT": "https://sis-t.redsys.es:25443/sis/realizarPago",
+  "SIGNATURE_VERSION": "HMAC_SHA256_V1",
+  "LOCAL_TUNNEL_SUBDOMAIN": "mipruebalocal"
+}
+
